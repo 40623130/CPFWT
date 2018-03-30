@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/index')
 def group():
     output = ""
-    with open("text.txt") as fh:
+    with open("2test.txt") as fh:
         # 逐行讀出檔案資料, 並放入數列中
         lines = fh.readlines()
         # 設法用迴圈逐數列內容取出字串
@@ -34,6 +34,7 @@ def group():
                 else:
                    output += groups[i] + " "
     return output
+
 
 
 if __name__ == '__main__':
